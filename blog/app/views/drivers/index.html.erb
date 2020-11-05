@@ -1,0 +1,19 @@
+
+<h1>Listing Drivers</h1>
+<%= link_to 'New driver', new_driver_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Image</th>
+  </tr>
+
+  <% @drivers.each do |driver| %>
+    <tr>
+      <td><%= driver.name %></td>
+      <td><%= driver.email %></td>
+      <td><%= image_tag driver.image.url(:thumb) %></td>
+      <td><%= link_to 'Show', driver_path(driver) %></td>
+    </tr>
+  <% end %>
+</table>
