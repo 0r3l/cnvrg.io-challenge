@@ -3,12 +3,6 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .drivers{
   display: flex;
-  .list{
-    display: block;
-    width: 50%;
-  }
-  .links{
-    display: block;
-    width: 50%;
-  }
+  flex-wrap: wrap;
+  align-content: space-between;
 }

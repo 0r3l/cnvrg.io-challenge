@@ -11,12 +11,15 @@
   <body>
     <div class="container">
       <div class="header">
-        <h1>cnvrg.io challenge</h1>
+        <h1>cnvrg.io challenge - orel eliyahu</h1>
       </div>
       <div class="body">
         <div class="left-pane">
-          <div><%= link_to 'Blog App', controller: 'articles' %></div>
-          <div><%= link_to 'Cars App', controller: 'cars' %></div>
+          <h3>Applications</h3>
+          <ul>
+            <li><%= link_to 'Blog App', controller: 'articles' %></li>
+            <li><%= link_to 'Cars App', controller: 'cars' %></li>
+          </ul>
         </div>
         <div class="main-pane"> <%= yield %></div>
       </div>
