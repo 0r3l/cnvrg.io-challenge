@@ -22,7 +22,7 @@ body {
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   padding: 6px 10px;
 }
 
@@ -31,31 +31,35 @@ body {
 }
 
 .container {
-  border: 1px #f1f dashed;
+  padding: 5px;
+  /* border: 1px #f1f dashed; */
   display: block;
   height: 100%;
 }
 
 .container .header {
+  padding: 5px;
   text-align: center;
   text-transform: capitalize;
 }
 
 .container .body {
-  border: 1px #f1f dashed;
+  /* border: 1px #f1f dashed; */
   display: flex;
   height: 100%;
 }
 
 .container .body .left-pane {
-  border: 1px #f1f dashed;
+  /* border: 1px #f1f dashed; */
+  padding: 5px;
   display: block;
   width: 20%;
   height: 100%;
 }
 
 .container .body .main-pane {
-  border: 1px #f1f dashed;
+  /* border: 1px #f1f dashed; */
+  padding: 5px;
   display: block;
   width: 80%;
   height: 100%;
