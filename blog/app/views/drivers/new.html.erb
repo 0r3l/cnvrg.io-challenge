@@ -1,4 +1,5 @@
 <%= form_with scope: :driver, url: drivers_path, local: true do |form| %>
+  <%= render 'partials/errors', item: @driver %>
   <p>
     <%= form.label :name %><br>
     <%= form.text_field :name %>

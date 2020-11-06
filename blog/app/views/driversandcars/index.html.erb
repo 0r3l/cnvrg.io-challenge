@@ -24,8 +24,5 @@
       <%= render 'partials/table', arr: @drivers_by_car %>
     </div>
   </div>
-  <div class="links">
-    <div><%= link_to 'Drivers', controller: 'drivers' %></div>
-    <div> <%= link_to 'Cars', controller: 'cars' %></div>
-  </div>
+  <%= render 'partials/links' %>
 </div>

@@ -5,5 +5,6 @@ class Car < ApplicationRecord
   has_many :drivers_cars
   has_many :drivers, through: :drivers_cars, dependent: :destroy
   has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
-  validates_attachment_content_type :image, content_type: /\Aimage\/.png\z/
+  validates_attachment_content_type :image, :content_type => ["image/png"]
+
 end

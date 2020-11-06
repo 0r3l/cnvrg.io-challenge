@@ -1,4 +1,5 @@
 <%= form_with scope: :car, url: cars_path, local: true do |form| %>
+  <%= render 'partials/errors', item: @car %>
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
