@@ -1,21 +1,27 @@
-
-<h1>Listing Cars</h1>
-<%= link_to 'New car', new_car_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Type</th>
-    <th>Color</th>
-    <th>Image</th>
-  </tr>
-
-  <% @cars.each do |car| %>
-    <tr>
-      <td><%= car.title %></td>
-      <td><%= car.type %></td>
-      <td><%= car.color %></td>
-      <td><%= image_tag car.image.url(:thumb) %></td>
-      <td><%= link_to 'Show', car_path(car) %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="cars">
+  <div class="list">
+    <h1>Listing Cars</h1>
+    <%= link_to 'New car', new_car_path %>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Type</th>
+        <th>Color</th>
+        <th>Image</th>
+      </tr>
+      <% @cars.each do |car| %>
+        <tr>
+          <td><%= car.title %></td>
+          <td><%= car.type %></td>
+          <td><%= car.color %></td>
+          <td><%= image_tag car.image.url(:thumb), :class => "style_image" %></td>
+          <td><%= link_to 'Show', car_path(car) %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+  <div class="links">
+    <div><%= link_to 'Drivers', controller: 'drivers' %></div>
+    <div> <%= link_to 'Drivers And Cars', controller: 'driversandcars' %></div>
+  </div>
+</div>

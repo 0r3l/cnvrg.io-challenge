@@ -1,0 +1,31 @@
+<div class="driversandcars">
+  <div class="content">
+    <%= form_with scope: :driversandcars, url: driversandcars_path, local: true do |form| %>
+      <p>
+        <%= form.label :driver %><br>
+        <%= form.select(:driver, @drivers) %>
+      </p>
+      <p>
+        <%= form.label :car %><br>
+        <%= form.select(:car, @cars) %>
+      </p>
+      <p>
+        <%= form.submit('submit') %>
+      </p>
+    <% end %>
+  </div>
+  <div class="content">
+    <div class="group">
+      <h3>cars by driver</h3>
+      <%= render 'partials/table', arr: @cars_by_driver %>
+    </div>
+     <div class="group">
+      <h3>drivers by car</h3>
+      <%= render 'partials/table', arr: @drivers_by_car %>
+    </div>
+  </div>
+  <div class="links">
+    <div><%= link_to 'Drivers', controller: 'drivers' %></div>
+    <div> <%= link_to 'Cars', controller: 'cars' %></div>
+  </div>
+</div>

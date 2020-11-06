@@ -1,0 +1,18 @@
+<% if arr && !arr.any?(&:blank?) %>
+<table>
+  <tr>
+    <% arr.first.each do |key, value| %>
+      <th><%= key %></th>
+    <% end %>
+  </tr>
+  <% arr.each do |item| %>
+    <tr>
+      <% item.each do |key, value| %>
+        <td><%= value %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+<% else %>
+<div>no data</div>
+<% end %>

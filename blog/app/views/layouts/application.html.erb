@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>cnvrg.io challenge</title>
+    <link rel="https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans"/>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="header">
+        <h1>cnvrg.io challenge</h1>
+      </div>
+      <div class="body">
+        <div class="left-pane">
+          <div><%= link_to 'Blog App', controller: 'articles' %></div>
+          <div><%= link_to 'Cars App', controller: 'cars' %></div>
+        </div>
+        <div class="main-pane"> <%= yield %></div>
+      </div>
+    </div>
   </body>
 </html>

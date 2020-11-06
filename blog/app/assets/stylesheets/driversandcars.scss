@@ -1,14 +1,14 @@
-// Place all the styles related to the Car controller here.
+// Place all the styles related to the driversandcars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.cars{
+.driversandcars{
   display: flex;
-  .list{
+  .content{
     display: block;
-    width: 50%;
+    width: 40%;
   }
   .links{
     display: block;
-    width: 50%;
+    width: 20%;
   }
 }
