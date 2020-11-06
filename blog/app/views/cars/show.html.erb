@@ -9,4 +9,14 @@
   <%= @car.type %>
 </p>
 
+<p>
+  <strong>Color:</strong>
+  <%= @car.color %>
+</p>
+
+<p>
+  <strong>image:</strong><br/>
+  <%= image_tag @car.image.url(:medium), :class => "style_image_medium" %>
+</p>
+
 <%= link_to 'Back', cars_path %>

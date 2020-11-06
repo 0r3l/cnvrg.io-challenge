@@ -18,6 +18,11 @@
   height: 50px;
 }
 
+.style_image_medium {
+  width: 150px;
+  height: 150px;
+}
+
 body {
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;

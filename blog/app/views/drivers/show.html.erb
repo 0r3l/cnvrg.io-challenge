@@ -5,8 +5,13 @@
 </p>
 
 <p>
-  <strong>Type:</strong>
+  <strong>Email:</strong>
   <%= @driver.email %>
+</p>
+
+<p>
+  <strong>image:</strong><br/>
+  <%= image_tag @driver.image.url(:medium), :class => "style_image_medium" %>
 </p>
 
 <%= link_to 'Back', drivers_path %>
