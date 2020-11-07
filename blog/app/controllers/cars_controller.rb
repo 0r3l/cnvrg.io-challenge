@@ -13,6 +13,10 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     if @car.save
+      ActionCable.server.broadcast(
+        "cars",
+        { car: @car, host: request.base_url}
+      )
       redirect_to @car
     else
       render 'new'

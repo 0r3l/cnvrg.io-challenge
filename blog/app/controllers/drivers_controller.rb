@@ -13,6 +13,10 @@ class DriversController < ApplicationController
   def create
     @driver = Driver.new(driver_params)
     if @driver.save
+      ActionCable.server.broadcast(
+        "drivers",
+        { driver: @driver, host: request.base_url}
+      )
       redirect_to @driver
     else
       render 'new'
