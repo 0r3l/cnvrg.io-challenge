@@ -1,0 +1,18 @@
+<div class="driversandcars">
+  <div class="content">
+    <%= form_with scope: :driversandcars, url: driversandcars_match_path, local: true do |form| %>
+      <p>
+        <%= form.label :driver %><br>
+        <%= form.select(:driver, @drivers) %>
+      </p>
+      <p>
+        <%= form.label :car %><br>
+        <%= form.select(:car, @cars) %>
+      </p>
+      <p>
+        <%= form.submit('match') %>
+      </p>
+    <% end %>
+  </div>
+  <%= render 'partials/links' %>
+</div>

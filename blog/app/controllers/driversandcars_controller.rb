@@ -1,17 +1,30 @@
 class DriversandcarsController < ApplicationController
 
   def index
-    @cars = Car.all.map { |c| [c.title, c.id] }
-    @drivers = Driver.all.map { |d| [d.name, d.id] }
-
+    all_drivers_and_cars
     cars_by_driver
     drivers_by_car
+  end
+
+  def match
+    all_drivers_and_cars
+  end
+
+  def create_match
+    @driversandcars = driverandcars_params
+    DriversCar.find_or_create_by({car_id: @driversandcars['car'], driver_id: @driversandcars['driver']})
+    redirect_to driversandcars_path(@driversandcars)
   end
 
   def create
     @driversandcars = driverandcars_params
     redirect_to @driversandcars
 
+  end
+
+  private def all_drivers_and_cars
+    @cars = Car.all.map { |c| [c.title, c.id] }
+    @drivers = Driver.all.map { |d| [d.name, d.id] }
   end
 
   private def driverandcars_params

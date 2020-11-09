@@ -3,14 +3,14 @@
     <%= form_with scope: :driversandcars, url: driversandcars_path, local: true do |form| %>
       <p>
         <%= form.label :driver %><br>
-        <%= form.select(:driver, @drivers) %>
+        <%= form.select(:driver, @drivers, selected: params['driver']) %>
       </p>
       <p>
         <%= form.label :car %><br>
-        <%= form.select(:car, @cars) %>
+        <%= form.select(:car, @cars, selected: params['car']) %>
       </p>
       <p>
-        <%= form.submit('submit') %>
+        <%= form.submit('find match') %>
       </p>
     <% end %>
   </div>
